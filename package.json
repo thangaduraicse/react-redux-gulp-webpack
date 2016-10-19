@@ -1,0 +1,29 @@
+{
+  "name": "react-redux-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Sample app in react with redux architecture",
+  "main": "client/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thangaduraicse/react-redux-webpack-boilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "Hot",
+    "Loader",
+    "Karma",
+    "Mocha",
+    "EsLint"
+  ],
+  "author": "Thangadurai Nainamalai <duraithanga3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thangaduraicse/react-redux-webpack-boilerplate/issues"
+  },
+  "homepage": "https://github.com/thangaduraicse/react-redux-webpack-boilerplate#readme"
+}
