@@ -1,0 +1,32 @@
+{
+  "name": "react-redux-webpack-boilerplate",
+  "description": "Sample app in react with redux architecture",
+  "main": "app/index.js",
+  "authors": [
+    "Thangadurai Nainamalai <duraithanga3@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "Gulp",
+    "Hot",
+    "Loader",
+    "Karma",
+    "Mocha",
+    "EsLint"
+  ],
+  "homepage": "https://github.com/thangaduraicse/react-redux-webpack-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "foundation": "^5.5.3"
+  }
+}
