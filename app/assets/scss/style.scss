@@ -1,0 +1,31 @@
+html {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+}
+body {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+table {
+  width: 100%;
+  margin: 0;
+  caption {
+    font-size: .9em;
+    padding: .5em 0;
+    font-weight: normal;
+  }
+}
+#root {
+  height: 100%;
+  > table {
+    border: 0px;
+    > tbody {
+      > tr {
+        > td {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

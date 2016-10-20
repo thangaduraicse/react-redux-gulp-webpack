@@ -2,8 +2,9 @@
   "name": "react-redux-webpack-boilerplate",
   "version": "1.0.0",
   "description": "Sample app in react with redux architecture",
-  "main": "client/app.js",
+  "main": "app/index.js",
   "scripts": {
+    "postinstall": "bower install",
     "start": "gulp",
     "build": "gulp build --production",
     "build-serve": "npm run build && http-server public/assets",
@@ -54,11 +55,26 @@
     "http-server": "^0.9.0",
     "main-bower-files": "^2.13.1",
     "precommit-hook": "^3.0.0",
+    "redux-immutable-state-invariant": "^1.2.4",
+    "redux-logger": "^2.7.0",
     "run-sequence": "^1.2.2",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^2.1.0-beta.9"
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "underscore": "^1.8.3"
+  }
 }
