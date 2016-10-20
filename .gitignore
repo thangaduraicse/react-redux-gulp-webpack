@@ -6,7 +6,6 @@
 *.swo
 *.swp
 *.tgz
-*.xml
 *.orig
 .DS_Store
 .idea
