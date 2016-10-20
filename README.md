@@ -33,12 +33,52 @@ The technology stack used in the project:
 
 ### Prerequisites
 
-- Support for Node.js > 5.
-- Install the following packages globally in your system.
+Support for Node.js > 5. Install the following packages globally in your system.
+
 ```sh
 $ npm install -g bower gulp http-server
+```
+
+### Installation
+
+```sh
+$ git clone https://github.com/thangaduraicse/react-redux-gulp-webpack.git
+$ cd app-name
+$ npm install
+```
+
+### Proxy Configuration
+
+If you are behind the company proxy, do the following steps.
+
+#### Bower
+
+Create .bowerrc file in root folder
+
+```sh
+  {
+    "directory": "bower_components",
+    "registry": "http://bower.herokuapp.com",
+    "proxy": <Proxy Address>,
+    "https-proxy": <Proxy Address>
+  }
+```
+
+#### NPM
+
+Create .npmrc file in root folder
+
+```sh
+  {
+    registry=http://registry.npmjs.org
+    proxy=<Proxy Address>
+    https-proxy=<Proxy Address>
+    http-proxy=<Proxy Address>
+    strict-ssl=false
+  }
 ```
 
 ### White Label It
 
 - Update name, description, author, repository in 'package.json' and 'bower.json'
+
