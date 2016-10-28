@@ -59,8 +59,8 @@ Create .bowerrc file in root folder
   {
     "directory": "bower_components",
     "registry": "http://bower.herokuapp.com",
-    "proxy": <Proxy Address>,
-    "https-proxy": <Proxy Address>
+    "proxy": "http://proxy.company.com:8050",
+    "https-proxy": "http://proxy.company.com:8050"
   }
 ```
 
@@ -69,13 +69,11 @@ Create .bowerrc file in root folder
 Create .npmrc file in root folder
 
 ```sh
-  {
-    registry=http://registry.npmjs.org
-    proxy=<Proxy Address>
-    https-proxy=<Proxy Address>
-    http-proxy=<Proxy Address>
-    strict-ssl=false
-  }
+  registry=http://registry.npmjs.org
+  proxy=http://proxy.company.com:8050
+  https-proxy=http://proxy.company.com:8050
+  http-proxy=http://proxy.company.com:8050
+  strict-ssl=false
 ```
 
 ### White Label It
