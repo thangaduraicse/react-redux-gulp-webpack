@@ -37,12 +37,10 @@ class HighchartSample extends Component {
     const closeRate = _.pluck(graphData, "Close");
     const highRate = _.pluck(graphData, "High");
     const lowRate = _.pluck(graphData, "Low");
+    const graphDates = _.pluck(graphData, "Date");
     
-    const pointInterval = 86400000;
-    const year = 2016;
-    const month = 0;
-    const day = 1;
-    const pointStart = Date.UTC(year, month, day);
+    const pointInterval = -86400000;
+    const pointStart = Date.parse(graphDates[0]);
 
     const color1 = _this._getRandomColor();
     const color2 = _this._getRandomColor();
@@ -69,6 +67,10 @@ class HighchartSample extends Component {
         }
       },
       yAxis: {
+        min: 50,
+        max: 200,
+        tickInterval: 10,
+        lineWidth: 1,
         title: {
           text: "Price"
         },
