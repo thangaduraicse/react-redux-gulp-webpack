@@ -8,6 +8,7 @@
     "start": "gulp",
     "build": "gulp build --production",
     "build-serve": "npm run build && http-server public/assets",
+    "c9-serve": "gulp build && http-server public/assets --host $IP --port $PORT -C 1",
     "lint": "eslint ."
   },
   "repository": {
@@ -53,6 +54,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "highcharts": "^5.0.2",
     "http-server": "^0.9.0",
     "main-bower-files": "^2.13.1",
     "precommit-hook": "^3.0.0",

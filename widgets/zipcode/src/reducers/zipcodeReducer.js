@@ -3,7 +3,10 @@ import constant from "../constants/zipcodeConstants";
 const initialState = {
   addresses: [],
   fetchZipcodeErrorMessage: "",
-  searchHistory: []
+  searchHistory: [],
+  graphColumns: [],
+  graphData: [],
+  fetchGraphErrorMessage: ""
 };
 
 const zipcodeReducer = (state = initialState, action) => {
@@ -27,6 +30,18 @@ const zipcodeReducer = (state = initialState, action) => {
           state.addresses[action.index]
         ],
         addresses: []
+      };
+    case constant.FETCH_STOCK_DATA_FROM_QUANTL_SUCCESS:
+      return {
+        ...state,
+        graphColumns: action.columns,
+        graphData: action.data,
+        fetchGraphErrorMessage: ""
+      };
+    case constant.FETCH_STOCK_DATA_FROM_QUANTL_FAILURE:
+      return {
+        ...state,
+        fetchGraphErrorMessage: action.message
       };
     default:
       return state;

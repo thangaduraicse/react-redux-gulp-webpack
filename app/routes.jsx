@@ -4,7 +4,7 @@ import {Route, IndexRoute, Redirect} from "react-router";
 import App from './App';
 
 // Include all app widgets here
-import ZipcodeWidget from "../widgets/zipcode/src/containers/ZipCodeListApp";
+import ZipcodeWidget from "../widgets/zipcode/src/containers";
 
 export default (
   <Route path="/" component={App}>

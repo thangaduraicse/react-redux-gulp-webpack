@@ -80,3 +80,49 @@ export function updateSearchHistory(addressedIndex) {
     index: addressedIndex
   };
 }
+
+export function fetchStockDataFromQuantlRequest() {
+  return {
+    type: constant.FETCH_STOCK_DATA_FROM_QUANTL_REQUEST
+  };
+}
+
+export function fetchStockDataFromQuantlSuccess(columns, data) {
+  return {
+    type: constant.FETCH_STOCK_DATA_FROM_QUANTL_SUCCESS,
+    columns,
+    data
+  };
+}
+
+export function fetchStockDataFromQuantlFailure(message) {
+  return {
+    type: constant.FETCH_STOCK_DATA_FROM_QUANTL_FAILURE,
+    message
+  };
+}
+
+export function fetchSampleStockDataFromQuantl() {
+  return dispatch => {
+    dispatch(fetchStockDataFromQuantlRequest);
+    return fetch("https://www.quandl.com/api/v3/datasets/WIKI/" + 
+      "FB.json?api_key=AvLgG8CjuBrtx3C3kDwL")
+      .then(res => res.json())
+      .then(json => {
+        let dataset = json.dataset;
+        let startIndex = 0;
+        let endIndex = 5;
+        let maxData = 25;
+        let columnNames = dataset.column_names.slice(startIndex, endIndex);
+        let gData = dataset.data.slice(startIndex, maxData)
+                      .map(data => data.slice(startIndex, endIndex));
+        // Combine Two Array to Form Objects
+        gData = _.map(gData, d => _.object(columnNames, d));
+        dispatch(fetchStockDataFromQuantlSuccess(columnNames, gData));
+      })
+      .catch(ex => {
+        dispatch(fetchStockDataFromQuantlFailure("Error in getting data from" +
+          "Quantl api!"));
+      });
+  };
+}
