@@ -67,9 +67,9 @@ class HighchartSample extends Component {
         }
       },
       yAxis: {
-        min: 50,
-        max: 200,
-        tickInterval: 10,
+        min: 126,
+        max: 134,
+        tickInterval: 0.1,
         lineWidth: 1,
         title: {
           text: "Price"
